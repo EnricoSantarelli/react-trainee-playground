@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function LoginPage() {
 
-    const [password, setPassword] = useState<string>();
+    const [, setPassword] = useState<string>();
     const [username, setUsername] = useState<string>();
 
     return (
