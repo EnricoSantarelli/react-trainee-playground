@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useContext } from "react";
+import { AssessmentContext } from "../contexts/assessment-context";
 
 export default function AssessmentInput() {
 
-    const [assessment, setAssessment] = useState(0);
+    const { assessment, setAssessment } = useContext(AssessmentContext)
 
     const handleMinusClick = () => {
         if (assessment > 0) {
