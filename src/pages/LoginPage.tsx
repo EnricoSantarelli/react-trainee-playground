@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import AssessmentInput from "../components/AssessmentInput";
 
 export default function LoginPage() {
 
@@ -8,6 +9,7 @@ export default function LoginPage() {
 
     return (
         <main>
+            <AssessmentInput />
             <h1>Página de Login</h1>
             <form>
                 <input type="text" onChange={(e) => setUsername(e.currentTarget.value)} />

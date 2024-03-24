@@ -1,10 +1,13 @@
 import "./App.css"
 import { AppRouter } from "./AppRouter"
+import { AssessmentProvider } from "./contexts/assessment-context"
 
 function App() {
 
   return (
-    <AppRouter />
+    <AssessmentProvider>
+      <AppRouter />
+    </AssessmentProvider>
   )
 }
 

@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import AssessmentInput from "../components/AssessmentInput";
 
 export default function UserPage() {
 
@@ -17,8 +18,19 @@ export default function UserPage() {
         setIdade((idadeAtual) => idadeAtual + 1)
     }
 
+    useEffect(() => {
+        alert(`Bem-vindo ${usuario}`)
+    }, [])
+
+    useEffect(() => {
+        if (idade >= 18) {
+            alert("Você é maior de idade")
+        }
+    }, [idade])
+
     return (
         <main>
+            <AssessmentInput />
             <p>{usuario}</p>
             <div>
                 <p>Selecione a sua idade</p>
